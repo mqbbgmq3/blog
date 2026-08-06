@@ -1,0 +1,23 @@
+- class_name: 科技
+  class_desc: 开发者会用到的网站
+  link_list:
+    - name: GitHub
+      link: https://github.com
+      avatar: https://github.com/favicon.ico
+      descr: 全球最大的开源社区，托管了数百万个开源项目。
+    - name: Stack Overflow
+      link: https://stackoverflow.com
+      avatar: https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico
+      descr: 全球最大的程序员问答社区，提供编程问题的解答和技术讨论。
+    - name: MDN Web Docs
+      link: https://developer.mozilla.org
+      avatar: https://developer.mozilla.org/favicon.ico
+      descr: Mozilla 提供的 Web 开发文档，涵盖 HTML、CSS、JavaScript 等前端技术。
+    - name: W3Schools
+      link: https://www.w3schools.com
+      avatar: https://www.w3schools.com/favicon.ico
+      descr: 提供各种 Web 技术的教程和参考资料，适合初学者学习。
+    - name: FreeCodeCamp
+      link: https://www.freecodecamp.org
+      avatar: https://www.freecodecamp.org/favicon.ico
+      descr: 一个免费的编程学习平台，提供实践项目和认证课程。

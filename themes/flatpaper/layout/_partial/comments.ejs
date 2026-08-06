@@ -1,0 +1,74 @@
+<%
+var sys = theme.comments ? String(theme.comments).toLowerCase() : '';
+var pageTypeKey = String(page.type || '').toLowerCase();
+var isNotFoundPage = page.layout === '404' || pageTypeKey === '404';
+var isContentPage = (is_post() || page.layout === 'page') && !isNotFoundPage;
+var canRender = isContentPage && page.comments !== false;
+
+var tk = theme.twikoo || {};
+var ak = theme.artalk || {};
+var gt = theme.gitalk || {};
+var renderTwikoo = canRender && sys === 'twikoo' && tk.envId;
+var renderArtalk = canRender && sys === 'artalk' && ak.server;
+var renderGitalk = canRender && sys === 'gitalk' && gt.clientID && gt.repo && gt.owner;
+
+function jsonForScript(value) {
+  return JSON.stringify(value).replace(/<\//g, '<\\/');
+}
+%>
+<% if (renderTwikoo) { %>
+<section class="comments-section" aria-label="<%= flatpaper_i18n('common.comments') %>">
+  <header class="comments-section__head">
+    <h2><%- partial('_partial/icons', { icon: 'message-circle' }) %><%= flatpaper_i18n('common.comments') %></h2>
+  </header>
+  <div id="tcomment"></div>
+</section>
+<script>
+window.addEventListener('load', function () {
+  if (typeof twikoo === 'undefined') return;
+  twikoo.init({ envId: <%- jsonForScript(tk.envId) %>, el: '#tcomment' });
+});
+</script>
+<% } else if (renderArtalk) { %>
+<section class="comments-section" aria-label="<%= flatpaper_i18n('common.comments') %>">
+  <header class="comments-section__head">
+    <h2><%- partial('_partial/icons', { icon: 'message-circle' }) %><%= flatpaper_i18n('common.comments') %></h2>
+  </header>
+  <div id="artalk-comments"></div>
+</section>
+<script>
+window.addEventListener('load', function () {
+  if (typeof Artalk === 'undefined' || typeof Artalk.init !== 'function') return;
+  Artalk.init({
+    el: '#artalk-comments',
+    pageKey: <%- jsonForScript(page.permalink || url_for(page.path || '')) %>,
+    pageTitle: <%- jsonForScript(page.title || '') %>,
+    server: <%- jsonForScript(ak.server) %>,
+    site: <%- jsonForScript(ak.site || '') %>
+  });
+});
+</script>
+<% } else if (renderGitalk) { %>
+<section class="comments-section" aria-label="<%= flatpaper_i18n('common.comments') %>">
+  <header class="comments-section__head">
+    <h2><%- partial('_partial/icons', { icon: 'message-circle' }) %><%= flatpaper_i18n('common.comments') %></h2>
+  </header>
+  <div id="gitalk-container"></div>
+</section>
+<script>
+window.addEventListener('load', function () {
+  if (typeof Gitalk === 'undefined') return;
+  var gitalk = new Gitalk({
+    clientID: <%- jsonForScript(gt.clientID) %>,
+    clientSecret: <%- jsonForScript(gt.clientSecret || '') %>,
+    repo: <%- jsonForScript(gt.repo) %>,
+    owner: <%- jsonForScript(gt.owner) %>,
+    admin: <%- jsonForScript(gt.admin || []) %>,
+    id: location.pathname.substr(0, 50),
+    distractionFreeMode: <%= gt.distractionFreeMode !== false %>,
+    language: <%- jsonForScript(gt.language || 'zh-CN') %>
+  });
+  gitalk.render('gitalk-container');
+});
+</script>
+<% } %>
