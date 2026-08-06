@@ -66,7 +66,8 @@ window.addEventListener('load', function () {
     admin: <%- jsonForScript(gt.admin || []) %>,
     id: location.pathname.substr(0, 50),
     distractionFreeMode: <%= gt.distractionFreeMode !== false %>,
-    language: <%- jsonForScript(gt.language || 'zh-CN') %>
+    language: <%- jsonForScript(gt.language || 'zh-CN') %>,
+    proxy: <%- jsonForScript(gt.proxy || '') %>
   });
   gitalk.render('gitalk-container');
 });
