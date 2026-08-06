@@ -260,7 +260,7 @@ footer:
     enable: true
     prefix: Powered by 
     name: Mqbbgmq3 Blog
-    # link: https://github.com/Homulilly/hexo-theme-flatpaper
+    link: https://mqbbgmq3.netlify.app
   links:
     # -
     #   - name: 服务条款
