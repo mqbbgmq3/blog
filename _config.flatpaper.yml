@@ -397,3 +397,4 @@ gitalk:
   language: 'zh-CN'     # 界面语言: zh-CN / en
   cdn_css: 'https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.css'
   cdn_js: 'https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js'
+  proxy: '/.netlify/functions/gitalk-token'   # 相对路径，自动绑定当前域名
