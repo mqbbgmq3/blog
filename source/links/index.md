@@ -1,5 +1,5 @@
 ---
 title: 友链
-layout: links
+type: links
 ---
 欢迎申请友链
