@@ -232,7 +232,7 @@ buttons:
 
 # 首页轮播置顶（最多 4 项；按文章 slug / 路径 / 标题任一匹配）
 featured:
-  - hello-world
+  # - hello-world
   # - markdown-elements-showcase
   # - 2026/05/09/weekend-photowalk-notes
 
