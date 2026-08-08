@@ -94,7 +94,7 @@ profile:
     #   svg: '<path d="M2 2 L22 22"/>'
   # 在 socials 区域追加一个 RSS 图标（需要装 hexo-generator-feed 并在站点 _config.yml 启用 feed）
   rss:
-    enable: false
+    enable: true
     path: /atom.xml
 
 welcome:
