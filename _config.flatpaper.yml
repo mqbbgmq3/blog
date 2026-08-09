@@ -101,7 +101,7 @@ welcome:
   label: Welcome
   title: Write, Wrote, Written
   text: Hope I can live the life I want.
-  cta_text: 查看文章
+  cta_text: 所有文章
   cta_link: archives/
   # 自定义封面图。留空则使用 CSS 绘制的山景默认图。
   # 支持站内相对路径（如 /images/welcome.jpg，放在站点 source/ 下）或绝对 URL。
@@ -232,7 +232,7 @@ buttons:
 
 # 首页轮播置顶（最多 4 项；按文章 slug / 路径 / 标题任一匹配）
 featured:
-  # - hello-world
+  - hello-world
   # - markdown-elements-showcase
   # - 2026/05/09/weekend-photowalk-notes
 

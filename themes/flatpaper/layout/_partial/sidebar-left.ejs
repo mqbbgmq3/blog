@@ -18,7 +18,7 @@
         <% } %>
       </div>
       <p class="hello"><span class="green-dot"></span><%= w.label || 'Hello!' %></p>
-      <h1><%= w.title || flatpaper_i18n('welcome.title') %></h1>
+      <h2 class="welcome-card__title"><%= w.title || flatpaper_i18n('welcome.title') %></h2>
       <p class="welcome-text"><%= w.text || flatpaper_i18n('welcome.text') %></p>
       <a class="welcome-cta" href="<%- url_for(ctaLink) %>"><span><%= ctaText %></span><%- partial('_partial/icons', { icon: 'arrow-right' }) %></a>
     </section>
