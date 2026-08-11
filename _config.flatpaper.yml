@@ -76,12 +76,13 @@ profile:
     # X: https://x.com/yourname
     # YouTube: https://youtube.com/@yourchannel
     # Bilibili: https://space.bilibili.com/12345
-    # Steam: https://steamcommunity.com/id/yourname
+    Steam: https://steamcommunity.com/id/Mqbbgmq3
     # Facebook: https://facebook.com/yourname
     # Instagram: https://instagram.com/yourname
     # Telegram: https://t.me/yourname
     # Weibo: https://weibo.com/u/12345
     Reddit: https://www.reddit.com/u/mqbbgmq3
+    HuggingFace: https://huggingface.co/mqbbgmq3
     # 写法 2：对象 -> 指定使用某个内置图标（用于自定义命名 / 别名）
     # Mastodon:
     #   url: https://mastodon.social/@yourname
