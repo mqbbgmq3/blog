@@ -7,4 +7,3 @@ public/
 .deploy*/
 _multiconfig.yml
 install.sh.wrangler/
-node_modules/
