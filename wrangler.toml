@@ -1,0 +1,12 @@
+# Cloudflare Pages 配置
+# 文档: https://developers.cloudflare.com/pages/configuration/
+name = "hexo-site"
+compatibility_date = "2024-09-23"
+
+# Pages 构建配置（也可在 Dashboard 中设置）
+[build]
+command = "npm run build"
+output_dir = "public"
+
+# Functions 路由自动映射，无需额外配置
+# /api/gitalk-token → functions/api/gitalk-token.js
